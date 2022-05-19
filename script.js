@@ -16,8 +16,9 @@ function updateCountdown() {
 	seconds = (seconds < 10) ? "0" + seconds : seconds;
 
 	countdownElement.innerHTML = `${minutes} : ${seconds}`;
-
-	time--;
+	if (time != 0) {
+		time--;
+	}
 }
 
 setInterval(updateCountdown, 1000);
