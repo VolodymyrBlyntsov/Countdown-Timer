@@ -14,6 +14,11 @@ const countdown = () => {
 	let openingMinute = Math.floor((gap % hour) / minute);
 	let openingSecond = Math.floor((gap % minute) / second);
 
+	openingDay = (openingDay < 10) ? "0" + openingDay : openingDay;
+	openingHour = (openingHour < 10) ? "0" + openingHour : openingHour;
+	openingMinute = (openingMinute < 10) ? "0" + openingMinute : openingMinute;
+	openingSecond = (openingSecond < 10) ? "0" + openingSecond : openingSecond;
+
 	document.querySelector('.day').innerText = openingDay;
 	document.querySelector('.hour').innerText = openingHour;
 	document.querySelector('.minute').innerText = openingMinute;
